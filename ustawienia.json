@@ -29,7 +29,7 @@
     "cssVar": "bg-k",
     "colorDark": "#ff8b55",
     "colorLight": "#c0392b",
-    "icon": "https://api.iconify.design/game-icons:wolf-head.svg"
+    "icon": "https://api.iconify.design/game-icons:rank-1.svg"
   },
   "M": {
     "from": 25,
@@ -37,7 +37,7 @@
     "cssVar": "bg-m",
     "colorDark": "#ffff00",
     "colorLight": "#b7950b",
-    "icon": "https://api.iconify.design/game-icons:eagle-emblem.svg"
+    "icon": "https://api.iconify.design/game-icons:rank-1.svg"
   },
   "Y": {
     "from": 37,
@@ -45,6 +45,6 @@
     "cssVar": "bg-y",
     "colorDark": "#00ff00",
     "colorLight": "#196f3d",
-    "icon": "https://api.iconify.design/game-icons:biohazard.svg"
+   "icon": "https://api.iconify.design/game-icons:rank-1.svg"
   }
 }
