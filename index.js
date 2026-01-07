@@ -310,15 +310,15 @@ function renderGroupConfigModal() {
         return `
                         <div class="group-row" data-id="${key}" style="display:grid; grid-template-columns: 40px 1fr 1fr 60px 60px; gap:10px; align-items:center; background:var(--bg-input); padding:12px; border:1px solid var(--border-color);">
                             <div class="group-id-badge" style="background:var(--${conf.cssVar}); color:var(--text-badge); font-weight:bold; text-align:center; padding:2px;">${key}</div>
-                            
+
                             <div>
                                 <input type="number" class="inp-from cell-input" value="${conf.from}" style="width: 100%; border:1px solid var(--border-color); background:var(--bg-card); text-align: left; padding-left: 5px;">
                             </div>
-                            
+
                             <div style="font-size:12px; font-weight:bold; color:var(--text-secondary); opacity: 0.7; padding-left:5px;">
                                 -> ${endRange}
                             </div>
-                            
+
                             <!-- DARK MODE COLOR -->
                             <div style="display:flex; justify-content:center;">
                                 <input type="color" class="inp-color-dark" value="${conf.colorDark}" title="NIGHT MODE (Dark Theme)" style="border:none; background:none; width:30px; height:30px; cursor:pointer;">
@@ -681,12 +681,14 @@ function renderDashboard() {
     sortedCodes.forEach(code => {
         const badgeClass = getTagClass(code);
         const shiftLabel = SHIFT_MAP[code] || `STATUS_${code}`;
+        const count = grouped[code].length;
 
         html += `
             <div class="shift-card">
                 <div class="shift-header">
-                    <span class="shift-tag ${badgeClass}">${code}</span>
-                    <span style="font-size: 12px; opacity: 0.6;">${shiftLabel}</span>
+                    <span class="shift-tag tag ${badgeClass}">${code}</span>
+                    <span class="shift-label">${shiftLabel}</span>
+                    <span class="shift-count" style="margin-left: auto; font-weight: bold; color: var(--primary);">${count}</span>
                 </div>
                 <div class="shift-body">
                     ${grouped[code].map(w => {
@@ -972,16 +974,16 @@ function viewStaffDetails(idx) {
     }
 
     document.getElementById('staff-details').innerHTML = `
-        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:30px;">
-            <div>${groupBadge}<div style="font-size:10px; color:var(--text-secondary);">OPERATOR_PROFILE</div><h1 class="highlight" style="font-size:28px;">${w.name}</h1><div style="font-size:11px; opacity:0.6;">IDENTIFIER: ${w.id}</div></div>
-            <div style="background:var(--bg-card); padding:15px; border:1px solid var(--border-color); text-align:right;"><div style="font-size:14px; color:var(--text-secondary);">TOTAL_DUTY_HOURS</div><div style="font-size:24px; font-weight:bold; color:var(--primary);">${total} H</div></div>
+        <div class="staff-details-header">
+            <div class="staff-details-info">${groupBadge}<div class="staff-details-label">OPERATOR_PROFILE</div><h1 class="highlight staff-details-name">${w.name}</h1><div class="staff-details-id">IDENTIFIER: ${w.id}</div></div>
+            <div class="staff-details-hours-card"><div class="staff-details-hours-label">TOTAL_DUTY_HOURS</div><div class="staff-details-hours-value">${total} H</div></div>
         </div>
-        <div style="margin-bottom:15px; font-size:10px; letter-spacing:1px; color:var(--text-secondary);">
-            <i class="fas fa-calendar-alt"></i> HARMONOGRAM_INDYWIDUALNY 
-            <span style="margin-left:10px; opacity:0.7;">[ LEGENDA: <span class="shift-tag sb-1">D</span> <span class="shift-tag sb-2">N</span> <span class="shift-tag sb-x">X</span> <span class="shift-tag sb-u">U</span> <span class="shift-tag sb-s">S</span> ]</span>
+        <div class="staff-details-legend">
+            <i class="fas fa-calendar-alt"></i> HARMONOGRAM_INDYWIDUALNY [ LEGENDA: ]
+            <span class="staff-details-legend-items">[  <span class="shift-tag sb-1 day">D</span> <span class="shift-tag sb-2 night">N</span> <span class="shift-tag sb-x critical">X</span> <span class="shift-tag sb-u vacation">U</span> <span class="shift-tag sb-s training">S</span> ]</span>
         </div>
         <div class="calendar-layout"><div class="calendar-grid">${calendarGridHtml}</div>${statsHtml}</div>
-        <div style="margin-top:30px; padding:15px; border:1px solid var(--border-color); background:rgba(255,115,0,0.02); font-size:11px;"><span class="highlight">STATUS:</span> Podmiot aktywny w systemie.</div>
+        <div class="staff-details-status"><span class="highlight">STATUS:</span> Podmiot aktywny w systemie.</div>
     `;
 }
 
@@ -1158,5 +1160,4 @@ function getCellClass(c) {
     if (c === "S") return "cell-s";
 
     return "";
-
 }
