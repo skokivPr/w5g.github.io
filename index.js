@@ -575,6 +575,9 @@ async function syncData(mode) {
             notify("DATA_PULL_SUCCESSFUL", "success");
             updateFooter();
             refreshUI();
+
+            await new Promise(resolve => setTimeout(resolve, 3000));
+
         } else {
             if (!sys_state.data) throw new Error("NO_DATA_TO_PUSH");
             const contentStr = JSON.stringify(sys_state.data, null, 2);
@@ -597,6 +600,8 @@ async function syncData(mode) {
             sys_state.sha = result.content.sha;
             updateFooter();
             notify("REMOTE_STORAGE_UPDATED", "success");
+
+            await new Promise(resolve => setTimeout(resolve, 3000));
         }
     } catch (err) {
         if (!err.message.includes("REMOTE_REF")) {
@@ -1182,6 +1187,5 @@ function getCellClass(c) {
 
     return "";
 }
-
 
 
