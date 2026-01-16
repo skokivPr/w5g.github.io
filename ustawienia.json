@@ -32,7 +32,7 @@
     "icon": "https://api.iconify.design/game-icons:rank-1.svg"
   },
   "M": {
-    "from": 25,
+    "from": 26,
     "label": "M",
     "cssVar": "bg-m",
     "colorDark": "#cccc00",
@@ -40,7 +40,7 @@
     "icon": "https://api.iconify.design/game-icons:rank-1.svg"
   },
   "Y": {
-    "from": 37,
+    "from": 38,
     "label": "Y",
     "cssVar": "bg-y",
     "colorDark": "#00cc00",
