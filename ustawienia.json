@@ -3,7 +3,7 @@
     "from": 0,
     "label": "D",
     "cssVar": "bg-d",
-    "colorDark": "#cc8a28",
+    "colorDark": "#ffad32",
     "colorLight": "#d35400",
     "icon": "https://api.iconify.design/game-icons:rank-3.svg"
   },
@@ -11,15 +11,15 @@
     "from": 5,
     "label": "S",
     "cssVar": "bg-s",
-    "colorDark": "#0052cc",
+    "colorDark": "#0066ff",
     "colorLight": "#0056b3",
     "icon": "https://api.iconify.design/game-icons:rank-2.svg"
   },
   "L": {
-    "from": 10,
+    "from": 11,
     "label": "L",
     "cssVar": "bg-l",
-    "colorDark": "#5981cc",
+    "colorDark": "#6fa1ff",
     "colorLight": "#3178c6",
     "icon": "https://api.iconify.design/game-icons:rank-1.svg"
   },
@@ -27,7 +27,7 @@
     "from": 12,
     "label": "K",
     "cssVar": "bg-k",
-    "colorDark": "#cc6f44",
+    "colorDark": "#ff8b55",
     "colorLight": "#c0392b",
     "icon": "https://api.iconify.design/game-icons:rank-1.svg"
   },
@@ -35,15 +35,15 @@
     "from": 25,
     "label": "M",
     "cssVar": "bg-m",
-    "colorDark": "#cccc00",
+    "colorDark": "#ffff00",
     "colorLight": "#b7950b",
     "icon": "https://api.iconify.design/game-icons:rank-1.svg"
   },
   "Y": {
-    "from": 36,
+    "from": 35,
     "label": "Y",
     "cssVar": "bg-y",
-    "colorDark": "#00cc00",
+    "colorDark": "#00ff00",
     "colorLight": "#196f3d",
     "icon": "https://api.iconify.design/game-icons:rank-1.svg"
   }
