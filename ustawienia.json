@@ -24,7 +24,7 @@
     "icon": "https://api.iconify.design/game-icons:rank-1.svg"
   },
   "K": {
-    "from": 12,
+    "from": 11,
     "label": "K",
     "cssVar": "bg-k",
     "colorDark": "#cc6f44",
