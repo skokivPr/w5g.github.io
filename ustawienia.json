@@ -40,7 +40,7 @@
     "icon": "https://api.iconify.design/game-icons:rank-1.svg"
   },
   "Y": {
-    "from": 41,
+    "from": 38,
     "label": "Y",
     "cssVar": "bg-y",
     "colorDark": "#00cc00",
