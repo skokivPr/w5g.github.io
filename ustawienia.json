@@ -8,7 +8,7 @@
     "icon": "https://api.iconify.design/game-icons:rank-3.svg"
   },
   "S": {
-    "from": 5,
+    "from": 7,
     "label": "S",
     "cssVar": "bg-s",
     "colorDark": "#0052cc",
